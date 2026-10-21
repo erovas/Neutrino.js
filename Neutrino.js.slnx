@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/1. SDK/">
+    <Project Path="Neutrino.Core/Neutrino.Core.csproj" Id="bcd46651-a870-4beb-9bc6-0b2a77b82845" />
+    <Project Path="Neutrino/Neutrino.csproj" Id="0f60705c-5659-4ff6-9986-e5d4d5adc8a5" />
+  </Folder>
+  <Folder Name="/2. Platforms/">
+    <Project Path="Neutrino.Linux/Neutrino.Linux.csproj" Id="024c2eaa-7b65-44a4-901e-3675908120f8" />
+    <Project Path="Neutrino.macOS/Neutrino.macOS.csproj" Id="45f9b910-8749-48b6-9626-9275661f3d00" />
+    <Project Path="Neutrino.Windows/Neutrino.Windows.csproj" Id="0c68eb57-1e7e-4522-81dd-226ff17e6c69" />
+  </Folder>
+</Solution>
