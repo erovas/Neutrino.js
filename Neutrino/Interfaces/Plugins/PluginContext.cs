@@ -2,14 +2,14 @@
 {
     internal class PluginContext : IPluginContext
     {
-        internal INeutrino? _neutrino;
+        internal Neutrino? _neutrino;
         private Action<string>? _onDisposed;
         private int _released;
 
         /// <summary>
         /// WebView que aloja al plugin. Puede ser null tras llamar a <see cref="Release"/>.
         /// </summary>
-        public INeutrino Neutrino => Volatile.Read(ref _neutrino)!;
+        public Neutrino Neutrino => Volatile.Read(ref _neutrino)!;
 
         /// <summary>
         /// Identidad única del plugin. Es un valor inmutable.
@@ -37,7 +37,7 @@
         /// </summary>
         internal bool Asignated { get; set; }
 
-        internal PluginContext(INeutrino webview, string uid, string name, Action<string>? onDisposed = null)
+        internal PluginContext(Neutrino webview, string uid, string name, Action<string>? onDisposed = null)
         {
             _neutrino = webview;
             UID = uid;

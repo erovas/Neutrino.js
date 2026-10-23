@@ -8,4 +8,7 @@
     <Project Path="Neutrino.macOS/Neutrino.macOS.csproj" Id="45f9b910-8749-48b6-9626-9275661f3d00" />
     <Project Path="Neutrino.Windows/Neutrino.Windows.csproj" Id="0c68eb57-1e7e-4522-81dd-226ff17e6c69" />
   </Folder>
+  <Folder Name="/3. Plugins/">
+    <Project Path="Storage/Storage.csproj" Id="49abaf32-8e2a-4892-b802-60bff52ac2f5" />
+  </Folder>
 </Solution>

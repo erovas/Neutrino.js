@@ -1,4 +1,6 @@
-﻿namespace Neutrino.Interfaces.ContextMenu
+﻿using Neutrino.Enums;
+
+namespace Neutrino.Interfaces.ContextMenu
 {
     public interface IContextMenuNativeItem
     {
@@ -11,7 +13,7 @@
         /// Gets item kind.
         /// "Separator", "Radio", "CheckBox", "Submenu", "Command"
         /// </summary>
-        string Kind { get; }
+        ContextMenuItemKind Kind { get; }
 
         /// <summary>
         /// Gets checked.

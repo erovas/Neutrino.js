@@ -5,52 +5,6 @@ namespace Neutrino
 {
     public static class App
     {
-
-        public static class Plugins
-        {
-            public const string Directory = "plugins";
-        }
-
-        public static class Window
-        {
-            public const string Title = "WV.js";
-            public const string State = "None";
-
-            public const int Width = 800;
-            public const int Height = 600;
-            public const int MinWidth = 136;
-            public const int MinHeight = 39;
-            public const int MaxWidth = int.MaxValue;
-            public const int MaxHeight = int.MaxValue;
-
-        }
-
-        public static class Browser
-        {
-            public const string Directory = "src";
-
-            public const string? Language = null;
-
-            public const string Uri = "index.html";
-
-            public const bool HotReload = false;
-
-            public const bool AcceleratorKeys = true;
-
-            public const bool SwipeNavigation = false;
-
-            public const double MinZoomFactor = 0.25;
-
-            public const double ZoomFactor = 1;
-
-            public const double MaxZoomFactor = 5;
-
-            public const bool Muted = false;
-
-            public const string ColorScheme = "Auto";
-
-        }
-
         /// <summary>
         /// 
         /// </summary>

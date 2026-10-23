@@ -1,4 +1,6 @@
-﻿namespace Neutrino.Interfaces
+﻿using Neutrino.Enums;
+
+namespace Neutrino.Interfaces
 {
     public interface IBrowser
     {
@@ -98,7 +100,12 @@
         /// <summary>
         /// Gets or sets the browser's color scheme. Default value is "Auto"
         /// </summary>
-        string ColorScheme { get; set; }
+        BrowserColorScheme ColorScheme { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        string Directory { get; }
 
         #endregion
 

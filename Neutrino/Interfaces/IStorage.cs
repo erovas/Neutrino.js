@@ -2,9 +2,9 @@
 {
     public interface IStorage
     {
-        string Get(string key);
+        string? Get(string key);
 
-        void Add(string key, string value);
+        bool Add(string key, string value);
 
         void Set(string key, string value);
 
@@ -14,6 +14,6 @@
 
         void Clear();
 
-        void Remove(string key);
+        bool Remove(string key);
     }
 }

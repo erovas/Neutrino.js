@@ -1,4 +1,6 @@
-﻿namespace Neutrino.Interfaces
+﻿using Neutrino.Enums;
+
+namespace Neutrino.Interfaces
 {
     public interface IWindow
     {
@@ -32,7 +34,7 @@
         /// <summary>
         /// Visible event.
         /// </summary>
-        event EventHandler<bool> Visible;
+        event EventHandler<bool> VisibleEvent;
 
         /// <summary>
         /// Size Changed event.
@@ -58,7 +60,7 @@
         /// <summary>
         /// Gets or sets window state.
         /// </summary>
-        string State { get; set; }
+        WindowState State { get; set; }
 
         /// <summary>
         /// Gets or sets a value that indicates whether this window appears in the topmost z-order.
@@ -82,7 +84,7 @@
         /// true if the window is visible; otherwise, false. The default value is false.
         /// </para>
         /// </summary>
-        bool IsVisible { get; }
+        bool Visible { get; set; }
 
         /// <summary>
         /// Prevents the window from closing, and fires the OnClose event

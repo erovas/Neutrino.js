@@ -1,6 +1,7 @@
-﻿using System.Reflection;
+﻿using Neutrino.Interfaces.Plugins;
+using System.Reflection;
 
-namespace Neutrino.Interfaces.Plugins
+namespace Neutrino
 {
     public abstract class Plugin : IDisposable
     {
@@ -13,7 +14,7 @@ namespace Neutrino.Interfaces.Plugins
 
         #region Properties
 
-        protected INeutrino Neutrino => _context.Neutrino;
+        protected Neutrino Neutrino => _context.Neutrino;
 
         public string UID => _context.UID;
 
@@ -34,7 +35,7 @@ namespace Neutrino.Interfaces.Plugins
                 throw new InvalidOperationException("The plugin context belongs to another plugin.");
 
             _context.Asignated = true;
-            _context._neutrino ??= (INeutrino)this;
+            _context._neutrino ??= (Neutrino)this;
         }
 
         public void Dispose()
@@ -104,6 +105,12 @@ namespace Neutrino.Interfaces.Plugins
 
                 _context.Release();
             }
+        }
+
+        protected void ThrowExceptionIfDisposed()
+        {
+            if(Disposed)
+                throw new ObjectDisposedException($"This instance of the {Name} plugin is disposed");
         }
 
         protected abstract void Dispose(bool disposing);
